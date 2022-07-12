@@ -1,0 +1,30 @@
+
+.nav-link{	
+	font-size: 100%;
+  font-weight: 500;    
+  color: white !important;  
+}
+
+.navbar-dark{
+    background-color: black;
+}
+
+.nav-link:hover{
+	color:white !important;
+	font-weight: bold !important;	  
+  text-underline-offset: 5px !important;
+  text-decoration: underline !important;
+}
+
+
+.link_active{
+	color: white !important;
+	font-weight: bold !important;
+  text-underline-offset: 5px !important;
+  text-decoration: underline !important;
+}
+
+.navbar-toggler {
+  background-color: orange !important;  
+}
+

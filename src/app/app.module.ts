@@ -10,11 +10,13 @@ import { AppRoutes } from './app.routing';
 import { CommonAlerts } from './common-alerts';
 import { UsersService } from './providers/users-service/users.service';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     FullComponent,
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

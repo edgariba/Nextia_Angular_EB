@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-dark  shadow-sm">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" id="menus" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a [routerLinkActive]="['link_active']" [routerLink]="['/usuarios']" data-toggle="collapse" data-target=".navbar-collapse.show"
+            [routerLinkActiveOptions]="{exact: true}" class="nav-link">Usuarios</a></li>
+            <li class="nav-item"><a [routerLinkActive]="['link_active']" [routerLink]="['/archivos']" data-toggle="collapse" data-target=".navbar-collapse.show"
+              [routerLinkActiveOptions]="{exact: true}" class="nav-link">Archivos</a></li>
+          <li class="nav-item"><a [routerLinkActive]="['link_active']"  data-toggle="collapse" data-target=".navbar-collapse.show"
+            [routerLinkActiveOptions]="{exact: true}" class="nav-link">Cerrar Sesión</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
