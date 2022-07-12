@@ -1,1 +1,49 @@
-<p>users works!</p>
+<loading *ngIf="isLoading"></loading>
+<div fxFlex.gt-sm="100%" class="container-fluid pt-5">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                Lista de usuarios
+                <button matTooltip="Crear nuevo usuario" routerLink="/usuarios/nuevo" class="button-add" mat-raised-button color="accent">
+                    <mat-icon class="color_amar">add_box</mat-icon> <span>Añadir</span>
+                </button>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="empty-data mat-elevation-z8 mt-3" *ngIf="usuarios.length == 0 && isLoaded">
+                <br>
+                <h3>Aún no has creado ningún usuario</h3>
+                <button class="buttons-actions empty-button" routerLink="/usuarios/nuevo" mat-flat-button color="primary" type="submit"><span>Añadir <b>Usuario</b></span> </button>
+            </div>
+            <div class="example-container mat-elevation-z8 mt-3" *ngIf="usuarios.length > 0">
+                <mat-table [dataSource]="usuarios">
+                    <ng-container matColumnDef="email">
+                        <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+                        <mat-cell data-label="Email" *matCellDef="let element"> {{element.email}} </mat-cell>
+                    </ng-container>
+
+
+                    <ng-container matColumnDef="action">
+                        <mat-header-cell *matHeaderCellDef> Acciones </mat-header-cell>
+                        <mat-cell data-label="Acciones" *matCellDef="let element">
+
+                            <button mat-icon-button color="accent" matTooltip="Editar o ver datos" (click)="goToEditUser(element.hash_user)">
+                                <mat-icon class="mat-18 material-icons color_green">border_color</mat-icon>
+                            </button>
+
+                            <button mat-icon-button color="accent" matTooltip="Eliminar" (click)="openDialogDelete(element)">
+                                <mat-icon class="mat-18 material-icons color_red">delete</mat-icon>
+                            </button>
+                        </mat-cell>
+                    </ng-container>
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                </mat-table>
+                <mat-paginator *ngIf="usuarios.length > 0" #paginator [length]="totalLength" [pageIndex]="pageIndex" [pageSize]="limit" [pageSizeOptions]="pageLimit" (page)="changePage($event)">
+                </mat-paginator>
+            </div>
+
+        </mat-card-content>
+
+    </mat-card>
+</div>

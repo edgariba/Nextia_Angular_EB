@@ -36,3 +36,73 @@ body {
     background-color: #FF8800 !important;
     border-color: #ffeeba !important;
 }
+
+
+.button-add {
+    float: right !important;
+    background-color: #FF8800 !important;
+    border-radius: 85px !important;
+}
+
+
+.mat-card-header-text{
+    width: 100%;
+}
+
+mat-card-title{
+    color: white !important;
+}
+
+mat-card-subtitle{
+    color: white !important;
+}
+
+.color_green{
+    color: rgb(98, 209, 98) !important;
+}
+
+.color_red{
+    color: red !important;
+}
+
+/* boton de close modal */
+
+.close-button {
+    float: right !important;
+    position: absolute !important;
+    top: 0px !important;
+    right: 0px !important;
+}
+
+.close-icon {
+    transition: 1s ease-in-out !important;
+}
+
+.close-icon:hover {
+    transform: rotate(180deg) !important;
+}
+
+::ng-deep .icon-outside .close-button {
+    float: right !important;
+    top: -52px !important;
+    right: -52px !important;
+}
+
+::ng-deep .icon-outside .mat-dialog-container {
+    overflow: unset !important;
+}
+
+
+/* boton de close modal */
+
+.empty-data {
+    text-align: center;
+    border-width: 3px;
+    border-style: dotted dashed solid double;
+    border-color: #161C2E;
+}
+
+.empty-button {
+    margin-top: 50px !important;
+    margin-bottom: 10px !important;
+}

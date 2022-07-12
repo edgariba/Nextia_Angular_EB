@@ -7,11 +7,13 @@ import { UsersComponent } from './userComponents/users/users.component';
 import { ActionsUsersComponent } from './userComponents/actions-users/actions-users.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { DemoMaterialModule } from '../material-module';
 
 
 @NgModule({
   declarations: [LoadingComponent, UsersComponent, ActionsUsersComponent],
   imports: [
+    DemoMaterialModule,
     HttpClientModule,
     CommonModule,
     RouterModule.forChild(ViewsRoutes),

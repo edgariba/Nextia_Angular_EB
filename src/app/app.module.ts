@@ -9,14 +9,17 @@ import { RouterModule } from '@angular/router';
 import { AppRoutes } from './app.routing';
 import { CommonAlerts } from './common-alerts';
 import { UsersService } from './providers/users-service/users.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { AuthInterceptorService } from './providers/bearer-token.interceptor';
 
 @NgModule({
   declarations: [
     FullComponent,
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,11 @@ import { HeaderComponent } from './header/header.component';
     BrowserAnimationsModule,
     RouterModule.forRoot(AppRoutes)
   ],
-  providers: [CommonAlerts, UsersService],
+  providers: [CommonAlerts, UsersService, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptorService,
+    multi: true
+   },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
