@@ -1,4 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-weight: 300;
+    background: #e9e9e9;
+}
+
+.mat-form-field {
+    width: 100% !important;
+}
+
+.snackbarsuccess {
+    background-color: rgb(55, 167, 61) !important;
+    color: white !important
+}
+
+.snackbarerror {
+    background-color: rgb(202, 54, 54) !important;
+    color: white !important
+}
+
+.snackbarwarn {
+    color: white !important;
+    background-color: #FF8800 !important;
+    border-color: #ffeeba !important;
+}

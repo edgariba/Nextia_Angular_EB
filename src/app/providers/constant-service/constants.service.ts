@@ -15,9 +15,9 @@ export class ConstantsService {
 
   getHeaders() {
     let httpHeaders = new HttpHeaders()
-      .set('Content-Type', 'application/json')
       .set('Access-Control-Allow-Headers', 'Content-Type')
-      .set('Access-Control-Allow-Origin', '*')
+      .set('Access-Control-Allow-Origin', '*')      
+      .set('Content-Type', 'application/json');
     let options = {
       headers: httpHeaders
     };

@@ -1,10 +1,14 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
+import { ActionsUsersComponent } from './userComponents/actions-users/actions-users.component';
+import { UsersComponent } from './userComponents/users/users.component';
 
-const routes: Routes = [];
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class ViewsRoutingModule { }
+export const ViewsRoutes: Routes = [
+  {
+    path: 'usuarios',
+    children: [
+      { path: '', component: UsersComponent },
+      { path: 'editar/:hash_user', component: ActionsUsersComponent},
+      { path: 'nuevo/:hash_device', component: ActionsUsersComponent},
+    ]
+  }
+];

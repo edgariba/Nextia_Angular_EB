@@ -7,6 +7,9 @@ import { DemoMaterialModule } from './material-module';
 import { FullComponent } from './layouts/full.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutes } from './app.routing';
+import { CommonAlerts } from './common-alerts';
+import { UsersService } from './providers/users-service/users.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,11 +18,12 @@ import { AppRoutes } from './app.routing';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     DemoMaterialModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(AppRoutes)
   ],
-  providers: [],
+  providers: [CommonAlerts, UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

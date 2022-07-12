@@ -6,11 +6,11 @@ export const AppRoutes: Routes = [{
   children: [
     {
       path: '',
-      redirectTo: '/',
+      redirectTo: '/login',
       pathMatch: 'full'
     },
     {
-      path: '',
+      path: 'login',
       loadChildren: () => import('./starter/starter.module').then(m => m.StarterModule)
     },
     {
