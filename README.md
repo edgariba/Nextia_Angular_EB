@@ -7,8 +7,9 @@ Este proyecto fue generado con la versión 13.3.0 de [Angular CLI](https://githu
 Ejecute `ng generate component component-name` para generar un nuevo componente. También puede usar `ng generate directive | pipe | service | class | guard | interface | enum | module`.
 
 ## Servidor de desarrollo
-
-Ejecute `ng serve` para un servidor de desarrollo. Navega hasta `http://localhost:4200/`. La aplicación se recargará automáticamente si cambias alguno de los archivos fuente.
+* Clonar el repositorio
+* Ejecute  `npm install`
+* Ejecute `ng serve` para un servidor de desarrollo. Navega hasta `http://localhost:4200/`. La aplicación se recargará automáticamente si cambias alguno de los archivos fuente.
 
 
 ## Construir el compilado para producción
