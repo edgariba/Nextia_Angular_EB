@@ -28,7 +28,10 @@ export class AuthInterceptorService implements HttpInterceptor {
             this.showWarning("Tu sesión expiro");                          
           }
         }
-        return throwError(err);
+        return throwError(() => {
+          this.cookieService.deleteAll()
+          //return "Tu sesión expiro...";
+        });
       })
     )
   }

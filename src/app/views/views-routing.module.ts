@@ -7,8 +7,8 @@ export const ViewsRoutes: Routes = [
     path: 'usuarios',
     children: [
       { path: '', component: UsersComponent },
-      { path: 'editar/:hashUser', component: ActionsUsersComponent},
-      { path: 'nuevo', component: ActionsUsersComponent},
+      { path: 'editar/:hashUser', component: ActionsUsersComponent, data: { ruta: 'editar' } },
+      { path: 'nuevo', component: ActionsUsersComponent, data: { ruta: 'nuevo' } },
     ]
   }
 ];

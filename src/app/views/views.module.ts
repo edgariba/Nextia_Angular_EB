@@ -8,6 +8,7 @@ import { ActionsUsersComponent } from './userComponents/actions-users/actions-us
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { DemoMaterialModule } from '../material-module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,6 +17,8 @@ import { DemoMaterialModule } from '../material-module';
     DemoMaterialModule,
     HttpClientModule,
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forChild(ViewsRoutes),
   ],
   exports: [

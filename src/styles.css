@@ -42,6 +42,7 @@ body {
     float: right !important;
     background-color: #FF8800 !important;
     border-radius: 85px !important;
+    margin-right: 20px !important;
 }
 
 
@@ -105,4 +106,31 @@ mat-card-subtitle{
 .empty-button {
     margin-top: 50px !important;
     margin-bottom: 10px !important;
+}
+
+.mat-card-header {
+    background: #000!important;
+    display: flow-root!important;
+}
+.mat-card-content{
+  background-color:rgb(255, 255, 255) !important;  
+  padding:5px ;
+}
+
+.mat-card {
+    background: white !important;  
+    color: #161C2E !important;  
+}
+
+.mat-card {
+    transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    display: block !important;
+    position: relative !important;
+    padding: 16px !important;
+    border-radius: 4px !important;
+}
+
+.mat-card .mat-card-header {
+    padding: 12px;
+    border-radius: 4px 4px 0 0;
 }
