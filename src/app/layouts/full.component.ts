@@ -7,6 +7,7 @@ import {
   OnDestroy,
   OnInit
 } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 
 /** @title Responsive sidenav */
 @Component({
@@ -24,7 +25,8 @@ export class FullComponent implements OnDestroy, AfterViewInit, OnInit {
   constructor(
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
-    private router: Router
+    private router: Router,
+    public cookieService: CookieService
   ) {
     this.mobileQuery = media.matchMedia('(min-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
