@@ -23,4 +23,14 @@ export class ConstantsService {
     };
     return options;
   }
+
+  getHeadersFile() {
+    let httpHeaders = new HttpHeaders()
+    .set('Access-Control-Allow-Headers', 'Content-Type')
+    .set('Access-Control-Allow-Origin', '*')      
+    let options = {
+      headers: httpHeaders
+    };
+    return options;
+  }
 }

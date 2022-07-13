@@ -21,17 +21,15 @@ export class AuthInterceptorService implements HttpInterceptor {
     return next.handle(request).pipe(
       catchError((err) => {
         if (err instanceof HttpErrorResponse) {
-          if (err.status === 403 || err.status == 401) {
+          if (err.status === 403 || err.status === 401) {
             console.warn("END JWT")
             // redirect user to the logout page
+            this.cookieService.deleteAll()
             this.router.navigate(['/login']);
             this.showWarning("Tu sesión expiro");                          
           }
         }
-        return throwError(() => {
-          this.cookieService.deleteAll()
-          //return "Tu sesión expiro...";
-        });
+        throw Error("Tu sesión expiro...");        
       })
     )
   }
